@@ -10,7 +10,7 @@ from app.utils.db import get_signals
 
 router = APIRouter()
 
-@router.get("/")
+@router.get("")
 async def get_prediction(pair: str = Query(..., description="Trading pair e.g., SOLUSDT")):
     try:
         df = await fetch_ohlcv(pair)
